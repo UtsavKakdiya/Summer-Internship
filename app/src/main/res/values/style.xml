@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.App" parent="@android:style/Theme.DeviceDefault"/>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen.IconBackground">
+
+        <!-- Set the splash screen background to black -->
+        <item name="windowSplashScreenBackground">@color/primary</item>
+
+        <!-- Set a white background behind the splash screen icon. -->
+        <item name="windowSplashScreenIconBackgroundColor">@color/primary</item>
+
+        <!-- Use windowSplashScreenAnimatedIcon to add a drawable or an animated
+        drawable. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>
+
+        <!-- Set the theme of the Activity that follows your splash screen. -->
+<!--        <item name="postSplashScreenTheme">@style/AppTheme</item>-->
+
+    </style>
+
+
+    <style name="EditTextPasswordVisible">
+        <!-- Other attributes for visible password style -->
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="EditTextPasswordHidden">
+        <!-- Other attributes for hidden password style -->
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+<!--        <item name="android:windowNoTitle">true</item>-->
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">#80000000</item>
+        <item name="behavior_peekHeight">0dp</item>
+    </style>
+</resources>

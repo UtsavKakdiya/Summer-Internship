@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/course_completed_bg"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:fontFamily="@font/poppins"
+        android:text="Course Completed!"
+        android:textAlignment="center"
+        android:textColor="@color/primary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="31dp"
+        android:text="Please Leave a review for your course"
+        android:textAlignment="center"
+        android:textColor="#979797"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="46dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/review_star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="show1Star"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/star_unselected" />
+
+        <ImageButton
+            android:id="@+id/review_star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="show2Star"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/star_unselected" />
+
+        <ImageButton
+            android:id="@+id/review_star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="show3Star"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/star_unselected" />
+
+        <ImageButton
+            android:id="@+id/review_star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="show4Star"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/star_unselected" />
+
+        <ImageButton
+            android:id="@+id/review_star5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="show5Star"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/star_unselected" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="26dp"
+        android:background="@drawable/bg_rectangle10dp"
+        android:fontFamily="@font/poppins"
+        android:hint="Write your review..."
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/secondary"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/submit_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="hidePopup"
+        android:layout_marginTop="50dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/submit" />
+
+    <ImageButton
+        android:id="@+id/cancel_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="hidePopup"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/cancel" />
+
+</LinearLayout>

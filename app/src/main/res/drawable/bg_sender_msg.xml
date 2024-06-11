@@ -1,0 +1,11 @@
+<!-- res/drawable/rectangle_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/primary"/> <!-- Background color -->
+    <corners
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="0dp"/>  <!-- Corner radius, use 0dp for sharp corners -->
+    <!--    <stroke android:width="2dp" android:color="#000000"/> &lt;!&ndash; Border width and color &ndash;&gt;-->
+<!--    <padding android:left="12dp" android:top="12dp" android:right="12dp" android:bottom="12dp"/> &lt;!&ndash; Padding inside the shape &ndash;&gt;-->
+</shape>

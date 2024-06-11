@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".NotificationActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Main_Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04">
+
+        <ImageButton
+            android:id="@+id/back_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:onClick="goToProfileActivity"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:fontFamily="@font/poppins"
+            android:text="Notification"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="18dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/Main_Title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_notification1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/name_notification1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="General Notification"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_on" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_notification2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_notification1">
+
+                <TextView
+                    android:id="@+id/name_notification2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="Sound"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_off" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_notification3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_notification2">
+
+                <TextView
+                    android:id="@+id/name_notification3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="Vibrate"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_off" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_notification4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_notification3">
+
+                <TextView
+                    android:id="@+id/name_notification4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="Special Offer"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_on" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_notification5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_notification4">
+
+                <TextView
+                    android:id="@+id/name_notification5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="Promo and Discount"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_off" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_notification6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_notification5">
+
+                <TextView
+                    android:id="@+id/name_notification6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="Payments"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_on" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_notification7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_notification6">
+
+                <TextView
+                    android:id="@+id/name_notification7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="App Update"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_on" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_notification8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_notification7">
+
+                <TextView
+                    android:id="@+id/name_notification8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="New Service Available"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_off" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_notification9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rectangle16dp"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_notification8">
+
+                <TextView
+                    android:id="@+id/name_notification9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="New Tips Available"
+                    android:textColor="#4E4E4E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/toggleBtn9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/toggle_off" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

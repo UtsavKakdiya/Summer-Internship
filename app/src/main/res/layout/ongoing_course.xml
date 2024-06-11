@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_ongoing_course1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rectangle16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/icon_course1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showPopup"
+                android:background="#00FFFFFF"
+                android:src="@drawable/img_course9" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1_ongoing_course1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Intro to UI/UX \nDesign"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2_completed_course1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="2 hrs 30 mins"
+                    android:textColor="#979797"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/progress_1"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                app:donut_circle_starting_degree="-90"
+                app:donut_finished_color="#FFC90C"
+                app:donut_finished_stroke_width="6dp"
+                app:donut_progress="80"
+                app:donut_show_text="true"
+                app:donut_text_color="@color/black"
+                app:donut_text_size="16sp"
+                app:donut_unfinished_color="#f5f5f5"
+                app:donut_unfinished_stroke_width="6dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ongoing_course2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_rectangle16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_ongoing_course1">
+
+            <ImageButton
+                android:id="@+id/icon_course2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:src="@drawable/img_course10" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1_ongoing_course2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="3D Blender \nand UI/UX"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2_ongoing_course2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="3 hrs 18 mins"
+                    android:textColor="#979797"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/progress_2"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                app:donut_circle_starting_degree="-90"
+                app:donut_finished_color="#1D2EC5"
+                app:donut_finished_stroke_width="6dp"
+                app:donut_progress="60"
+                app:donut_show_text="true"
+                app:donut_text_color="@color/black"
+                app:donut_text_size="16sp"
+                app:donut_unfinished_color="#f5f5f5"
+                app:donut_unfinished_stroke_width="6dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ongoing_course3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_rectangle16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_ongoing_course2">
+
+            <ImageButton
+                android:id="@+id/icon_course3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:src="@drawable/img_course11" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1_ongoing_course3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Learn UX User \nPersonal"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2_ongoing_course3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="4 hrs 48 mins"
+                    android:textColor="#979797"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/progress_3"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                app:donut_circle_starting_degree="-90"
+                app:donut_finished_color="#E13333"
+                app:donut_finished_stroke_width="6dp"
+                app:donut_progress="40"
+                app:donut_show_text="true"
+                app:donut_text_color="@color/black"
+                app:donut_text_size="16sp"
+                app:donut_unfinished_color="#f5f5f5"
+                app:donut_unfinished_stroke_width="6dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ongoing_course4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_rectangle16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_ongoing_course3">
+
+            <ImageButton
+                android:id="@+id/icon_course4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:src="@drawable/img_course12" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1_ongoing_course4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Intro to 3D \nAnimation"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2_ongoing_course4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="3 hrs 28 mins"
+                    android:textColor="#979797"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/progress_4"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                app:donut_circle_starting_degree="-90"
+                app:donut_finished_color="#1BB977"
+                app:donut_finished_stroke_width="6dp"
+                app:donut_progress="50"
+                app:donut_show_text="true"
+                app:donut_text_color="@color/black"
+                app:donut_text_size="16sp"
+                app:donut_unfinished_color="#f5f5f5"
+                app:donut_unfinished_stroke_width="6dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
